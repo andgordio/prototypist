@@ -2,8 +2,7 @@
   <div id="manager">
     <div class="menu-button-container">
       <button class="w-12 h-12 rounded-full bg-white shadow-md text-grey" :class="{fab: $route.name === 'Home'}" @click="openManager()">
-        <span v-if="isHome" class="icon ion-android-menu text-2xl"></span>
-        <span class="text-sm" v-else>{{selectedVersion}}</span>
+        <i class="ion-md-menu text-2xl"></i>
       </button>
     </div>
     <transition name="toggleShade">
@@ -18,7 +17,7 @@
           <h3 class="flex-1 text-2xl">Prototype manager</h3>
           <div class="" @click="toggleManager = !toggleManager">
             <button class="pt-2">
-              <span class="icon ion-android-close text-xl text-grey"></span>
+              <i class="ion-md-close text-xl text-grey"></i>
             </button>
           </div>
         </div>
@@ -42,8 +41,8 @@
             <ul class="list borderless list-reset">
               <li class="mx-3 px-3 py-3 rounded" v-for="(version, j) in iteration.versions" :key="j" @click="openPrototype(iteration.name,version.name)" :class="{selected: isSelected(iteration.name,version.name)}">
                 <div class="content cursor-pointer">
-                  <div class="text-base">{{iteration.name}}{{version.name}}</div>
-                  <div class="text-sm opacity-50" style="padding-top:2px;">{{version.description}}</div>
+                  <div class="text-base">{{version.description}}</div>
+                  <div class="text-sm opacity-50" style="padding-top:2px;">{{version.name}}</div>
                 </div>
               </li>
             </ul>
@@ -68,18 +67,6 @@ export default {
     }
   },
   computed: {
-    selectedVersion () {
-      // if (this.$route.name === 'ShoppingCart' || this.$route.name === 'Start' || this.$route.name === 'Checkout' || this.$route.name === 'Complete') {
-      // return 'D2'
-      // } else if (this.$route.name === 'ShoppingCart2' || this.$route.name === 'Start2' || this.$route.name === 'Checkout2' || this.$route.name === 'Complete2') {
-      // return 'D3'
-      // } else {
-      return this.$route.name
-      // }
-    },
-    isHome () {
-      return this.$route.name === 'Home'
-    }
   },
   methods: {
     checkScrollPosition () {

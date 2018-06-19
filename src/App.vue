@@ -24,12 +24,12 @@ export default {
         date: 'prototypeDate',
         iterations: [
           {
-            name: 'A',
-            description: 'variantDescription',
+            name: 'initial',
+            description: 'Start-off designs',
             versions: [
               {
-                name: '1',
-                description: 'versionDescription'
+                name: 'home',
+                description: 'First prototype'
               }
             ]
           }

@@ -3,7 +3,7 @@
     <Home msg="Welcome to Your Vue.js App"/>
     <div class="flex py-2 items-baseline">
       <div class="w-32 text-grey font-light">Name</div>
-      <div class="flex-1"><h1 class="text-5xl">Play 4 me <i class="ion-md-heart"></i></h1></div>
+      <div class="flex-1"><h1 class="text-5xl">Project name <i class="ion-md-heart"></i></h1></div>
     </div>
     <div class="flex pt-6 pb-2 items-baseline">
       <div class="w-32 text-grey font-light">Desciption</div>
@@ -11,11 +11,11 @@
     </div>
     <div class="flex pt-4 pb-2 items-baseline">
       <div class="w-32 text-sm text-grey font-light">Platform</div>
-      <div class="flex-1">Desktop</div>
+      <div class="flex-1">Desktop / Mobile</div>
     </div>
     <div class="flex pt-4 pb-2 items-baseline">
       <div class="w-32 text-sm text-grey font-light">Created by</div>
-      <div class="flex-1"><a class="no-underline text-blue" href="http://twitter.com/andgordy" target="_blank">And Gordy</a></div>
+      <div class="flex-1"><a class="no-underline text-blue" href="http://twitter.com" target="_blank">Best guy ever</a></div>
     </div>
   </div>
 </template>
