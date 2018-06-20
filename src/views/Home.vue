@@ -22,12 +22,9 @@
 
 <script>
 import '@/styles.css'
-import Home from '@/components/Home.vue'
+// import Home from '@/components/Home.vue'
 
 export default {
-  components: {
-    Home
-  },
   name: 'app',
   data () {
     return {
