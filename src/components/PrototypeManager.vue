@@ -1,7 +1,7 @@
 <template>
   <div id="manager">
     <div class="menu-button-container">
-      <button class="w-12 h-12 rounded-full bg-white shadow-md text-grey" :class="{fab: $route.name === 'Home'}" @click="openManager()">
+      <button class="w-12 h-12 rounded-full bg-white shadow text-grey" style="padding-top: 2px;" :class="{fab: $route.name === 'Home'}" @click="openManager()">
         <i class="ion-md-menu text-2xl"></i>
       </button>
     </div>
@@ -26,23 +26,24 @@
           <ul class="list borderless list-reset pt-4">
             <li class="mx-3 px-3 py-3 rounded" @click="goHome()" :class="{selected: $route.name === 'Home'}">
               <div class="content cursor-pointer">
-                <div class="text-base">Home</div>
-                <div class="text-sm opacity-50 pt-1" style="padding-top:2px;">Project Meta</div>
+                <div class="text-base">Project home</div>
+                <!-- <div class="text-sm opacity-50 pt-1" style="padding-top:2px;">Project Meta</div> -->
               </div>
             </li>
           </ul>
 
           <div v-for="(iteration, i) in managerProps.iterations" :key="i">
-            <div class="">
-              <div class="px-6 pt-8 pb-3 uppercase text-sm opacity-50">{{iteration.description}}</div>
+            <div class="flex items-center px-6 pt-8 pb-3">
+              <div class="uppercase text-sm text-grey flex-1">{{iteration.name}}</div>
+              <div class="text-sm text-grey w-8">{{iteration.code}}</div>
               <!--<h4>{{iteration.description}}</h4> {{iteration.name}}. -->
               <!-- <p>Iteration {{iteration.name}}</p> -->
             </div>
             <ul class="list borderless list-reset">
-              <li class="mx-3 px-3 py-3 rounded" v-for="(version, j) in iteration.versions" :key="j" @click="openPrototype(iteration.name,version.name)" :class="{selected: isSelected(iteration.name,version.name)}">
-                <div class="content cursor-pointer">
-                  <div class="text-base">{{version.description}}</div>
-                  <div class="text-sm opacity-50" style="padding-top:2px;">{{version.name}}</div>
+              <li class="mx-3 px-3 py-3 rounded" v-for="(version, j) in iteration.versions" :key="j" @click="openPrototype(iteration.code,version.code)" :class="{selected: isSelected(iteration.code,version.code)}">
+                <div class="content cursor-pointer flex">
+                  <div class="text-base flex-1">{{version.name}}</div>
+                  <div class="text-sm w-8">{{iteration.code}}{{version.code}}</div>
                 </div>
               </li>
             </ul>

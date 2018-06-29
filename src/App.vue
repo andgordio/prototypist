@@ -21,15 +21,16 @@ export default {
         description: 'prototypeDescription',
         author: 'prototypeAuthor',
         website: 'authorWebsite',
+        // todo: allow to define FAB style — fab: 'white' // options: 'white', 'transparent', 'transparent-dark'
         date: 'prototypeDate',
         iterations: [
           {
-            name: 'initial',
-            description: 'Start-off designs',
+            code: 'A',
+            name: 'Start-off designs',
             versions: [
               {
-                name: 'home',
-                description: 'First prototype'
+                code: '1',
+                name: 'First prototype'
               }
             ]
           }
